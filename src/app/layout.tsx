@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Zenvyra Naturals",
-    url: "https://zenvyranaturals.com",
+    url: "https://zenvyranaturals.shop",
     images: [
       {
         url: "/zenvyra-naturals-face.webp",
@@ -68,10 +68,7 @@ export const metadata: Metadata = {
       "max-snippet": -1
     }
   },
-  category: "Beauty & Skincare",
-  verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
-  }
+  category: "Beauty & Skincare"
 };
 
 export default function RootLayout({
@@ -90,8 +87,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Zenvyra Naturals",
               "description": "Premium organic face cream brand. Clean, conscious, and effective botanical skincare.",
-              "url": "https://zenvyranaturals.com",
-              "logo": "https://zenvyranaturals.com/zenvyra-naturals-face.webp",
+              "url": "https://zenvyranaturals.shop",
+              "logo": "https://zenvyranaturals.shop/zenvyra-naturals-face.webp",
               "sameAs": [
                 "https://instagram.com/zenvyranaturals",
                 "https://linkedin.com/company/zenvyranaturals"

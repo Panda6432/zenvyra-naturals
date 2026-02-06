@@ -305,7 +305,7 @@ export default function HomeSection5() {
                     </div>
 
                     {/* CENTER IMAGE */}
-                    <div className="relative z-20 w-48 h-80 md:w-60 md:h-96 lg:w-72 lg:h-[28rem] flex-shrink-0 order-2 lg:order-2">
+                    <div className="relative z-20 w-56 h-[22rem] md:w-72 md:h-[28rem] lg:w-80 lg:h-[32rem] flex-shrink-0 order-2 lg:order-2">
                         {products.map((product, i) => (
                             <div
                                 key={product.id}
@@ -313,7 +313,7 @@ export default function HomeSection5() {
                                 className="absolute inset-0"
                                 style={{ opacity: i === currentIndex ? 1 : 0, zIndex: i === currentIndex ? 1 : 0 }}
                             >
-                                <Image src={product.image} alt={`Zenvyra Naturals ${product.title} - Organic Face Cream`} fill className="object-contain" sizes="(max-width: 768px) 192px, 288px" priority={i < 2} />
+                                <Image src={product.image} alt={`Zenvyra Naturals ${product.title} - Organic Face Cream`} fill className="object-contain" sizes="(max-width: 768px) 50vw, (max-width: 1024px) 40vw, 500px" priority={i < 2} quality={90} />
                             </div>
                         ))}
                     </div>
@@ -355,9 +355,8 @@ export default function HomeSection5() {
                 <div className="w-full px-4 shrink-0 z-30">
                     <div className="flex items-center gap-4 max-w-xl mx-auto">
                         <button onClick={() => handleManualNav('prev')} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg></button>
-                        <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 h-[120px] flex flex-col justify-center text-center">
-                            <h3 className="text-white text-2xl md:text-3xl font-medium mb-2">{displayProduct.title}</h3>
-                            <p className="text-white/80 text-base md:text-lg font-light leading-relaxed line-clamp-3"></p>
+                        <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 flex items-center justify-center text-center">
+                            <h3 className="text-white text-xl md:text-2xl font-medium">{displayProduct.title}</h3>
                         </div>
                         <button onClick={() => handleManualNav('next')} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></button>
                     </div>

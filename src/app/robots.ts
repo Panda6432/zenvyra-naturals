@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
                 allow: '/',
             },
         ],
-        sitemap: 'https://zenvyranaturals.com/sitemap.xml',
+        sitemap: 'https://zenvyranaturals.shop/sitemap.xml',
     }
 }
