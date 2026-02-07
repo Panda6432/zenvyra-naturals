@@ -40,21 +40,6 @@ export default function HomeSection8() {
                 });
             }
 
-            // Optional: Fade in elements on scroll
-            gsap.fromTo(".fade-in",
-                { opacity: 0, y: 30 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.1,
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 60%",
-                    }
-                }
-            );
-
         }, sectionRef);
 
         return () => ctx.revert();
@@ -68,14 +53,14 @@ export default function HomeSection8() {
             {/* Title */}
             <div className="w-full px-6 md:px-10 flex flex-col md:flex-row justify-between items-start mb-16 md:mb-20">
                 <div className="w-full md:w-[35%] mb-10 md:mb-0">
-                    <h2 className="fade-in text-6xl md:text-8xl font-normal leading-none tracking-wide text-white">
+                    <h2 className="text-6xl md:text-8xl font-normal leading-none tracking-wide text-white">
                         Trusted and Proven
                     </h2>
                 </div>
             </div>
 
             {/* Marquee Container */}
-            <div className="w-full relative overflow-hidden fade-in">
+            <div className="w-full relative overflow-hidden">
                 {/* Gradient Masks for fading edges */}
                 <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
