@@ -7,7 +7,7 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 gsap.registerPlugin(MotionPathPlugin);
 
-// Product data
+
 const products = [
     {
         id: "green",

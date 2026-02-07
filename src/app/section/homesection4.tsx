@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// SEO: Stats that build trust (Social Proof)
+
 const stats = [
   { value: 5, suffix: "k+", label: "Daily Visitors" },
   { value: 98, suffix: "%", label: "Positive Reviews" },
@@ -21,7 +21,7 @@ export default function HomeSection4() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
-      // ONLY ANIMATION: Number Counter
+
       stats.forEach((stat, index) => {
         const el = numberRefs.current[index];
         if (!el) return;
@@ -36,7 +36,6 @@ export default function HomeSection4() {
             start: "top 60%", // Starts counting when section is 60% into view
           },
           onUpdate: function () {
-            // Update the text content with the rounded value
             el.innerText = Math.ceil(Number(this.targets()[0].innerText)) + "";
           },
         });
@@ -101,9 +100,7 @@ export default function HomeSection4() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center text-center ${
-                  // Add separator lines between numbers ONLY on desktop, and not for the last one
-                  index !== 2 ? "border-b-2 md:border-b-0 md:border-r-2 border-[#0a1a10]/20 pb-8 md:pb-0" : ""
+                className={`flex flex-col items-center justify-center text-center ${index !== 2 ? "border-b-2 md:border-b-0 md:border-r-2 border-[#0a1a10]/20 pb-8 md:pb-0" : ""
                   }`}
               >
                 {/* Number with Counter Animation */}

@@ -13,30 +13,25 @@ export default function Navbar() {
     const mobileMenuRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Animate navbar in from top after mount
         const timer = setTimeout(() => {
             setIsVisible(true);
         }, 100);
         return () => clearTimeout(timer);
     }, []);
 
-    // Mobile Menu Animation
     useEffect(() => {
         if (isMobileOpen) {
-            // Open animation
             gsap.to(mobileMenuRef.current, {
                 clipPath: "circle(150% at calc(100% - 3rem) 3rem)", // Expands from top right (approx position of hamburger)
                 duration: 0.8,
                 ease: "power2.inOut",
                 pointerEvents: "auto"
             });
-            // Animate items in
             gsap.fromTo(".mobile-nav-link",
                 { y: 50, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.3, ease: "power2.out" }
             );
         } else {
-            // Close animation
             gsap.to(mobileMenuRef.current, {
                 clipPath: "circle(0% at calc(100% - 3rem) 3rem)",
                 duration: 0.6,
@@ -88,9 +83,9 @@ export default function Navbar() {
                             >
                                 {/* Closed State: Hamburger Lines */}
                                 <div className={`absolute inset-0 flex flex-col items-center justify-center gap-[5px] transition-opacity duration-300 ${isDesktopHovered ? "opacity-0" : "opacity-100"}`}>
-                                    <span className="w-5 h-[2px] bg-[#CBA409] rounded-full" />
-                                    <span className="w-5 h-[2px] bg-[#CBA409] rounded-full" />
-                                    <span className="w-5 h-[2px] bg-[#CBA409] rounded-full" />
+                                    <span className="w-4 h-[1.5px] bg-[#CBA409]" />
+                                    <span className="w-4 h-[1.5px] bg-[#CBA409]" />
+                                    <span className="w-4 h-[1.5px] bg-[#CBA409]" />
                                 </div>
 
                                 {/* Open State: Nav Links */}
@@ -111,15 +106,15 @@ export default function Navbar() {
 
                         {/* MOBILE HAMBURGER (Visible only on mobile) */}
                         <button
-                            className="md:hidden w-10 h-10 rounded-full bg-[#034B38] border-2 border-[#CBA409] flex flex-col items-center justify-center gap-[4px] hover:bg-[#045d46] transition-all z-50 relative"
+                            className="md:hidden w-8 h-8 rounded-full bg-[#034B38] border-2 border-[#CBA409] flex items-center justify-center hover:bg-[#045d46] transition-all z-50 relative"
                             onClick={() => setIsMobileOpen(!isMobileOpen)}
                             aria-label="Toggle menu"
                         >
                             {/* Animate hamburger to X */}
-                            <div className="relative w-5 h-4 flex flex-col justify-between">
-                                <span className={`w-full h-[2px] bg-[#CBA409] rounded-full transition-all duration-300 ${isMobileOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-                                <span className={`w-full h-[2px] bg-[#CBA409] rounded-full transition-all duration-300 ${isMobileOpen ? "opacity-0" : ""}`} />
-                                <span className={`w-full h-[2px] bg-[#CBA409] rounded-full transition-all duration-300 ${isMobileOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+                            <div className="flex flex-col items-center justify-center gap-[4px]">
+                                <span className={`w-3.5 h-[1.5px] bg-[#CBA409] transition-all duration-300 ${isMobileOpen ? "rotate-45 translate-y-[5.5px]" : ""}`} />
+                                <span className={`w-3.5 h-[1.5px] bg-[#CBA409] transition-all duration-300 ${isMobileOpen ? "opacity-0" : ""}`} />
+                                <span className={`w-3.5 h-[1.5px] bg-[#CBA409] transition-all duration-300 ${isMobileOpen ? "-rotate-45 -translate-y-[5.5px]" : ""}`} />
                             </div>
                         </button>
 

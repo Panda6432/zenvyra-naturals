@@ -25,16 +25,12 @@ export default function HomeSection8() {
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            // Infinite Marquee Animation
             if (marqueeRef.current) {
-                // Use the total width of the container
                 const width = marqueeRef.current.scrollWidth;
 
-                // Move left by 50% of the total width (which equals 2 full sets of logos)
-                // Since we have 4 sets total, this loops seamlessly from set 1 to set 3
                 gsap.to(marqueeRef.current, {
                     x: -width / 2,
-                    duration: 30, // Adjusted duration for smooth speed
+                    duration: 30,
                     ease: "none",
                     repeat: -1,
                 });

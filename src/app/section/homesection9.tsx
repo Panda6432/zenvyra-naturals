@@ -47,7 +47,7 @@ export default function HomeSection9() {
         let ctx = gsap.context(() => {
             const mm = gsap.matchMedia();
 
-            // Desktop Animation ONLY (min-width: 768px)
+
             mm.add("(min-width: 768px)", () => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
@@ -60,7 +60,7 @@ export default function HomeSection9() {
                     },
                 });
 
-                // 1. Center Image: Zoom in
+
                 tl.to(".center-image", {
                     scale: 4.0,
                     borderRadius: 0,
@@ -70,7 +70,7 @@ export default function HomeSection9() {
                     force3D: true,
                 }, "start");
 
-                // 2. Row 1 (Top)
+
                 tl.to(".row-1", {
                     yPercent: -400,
                     xPercent: (i) => i === 0 ? -200 : 200,
@@ -80,16 +80,15 @@ export default function HomeSection9() {
                     force3D: true,
                 }, "start");
 
-                // 3. Row 2 Sides - Expand and move horizontally away from center
                 tl.to(".row-2-side", {
-                    xPercent: (i) => i === 0 ? -500 : 500, // Left goes far left, right goes far right
+                    xPercent: (i) => i === 0 ? -500 : 500,
                     scale: 3.5,
                     ease: "power2.inOut",
                     duration: 1,
                     force3D: true,
                 }, "start");
 
-                // 4. Row 3 (Bottom)
+
                 tl.to(".row-3", {
                     yPercent: 400,
                     xPercent: (i) => i === 0 ? -200 : 200,
@@ -99,14 +98,12 @@ export default function HomeSection9() {
                     force3D: true,
                 }, "start");
             });
-
-            // Mobile: No animation - images flow naturally
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
 
-    // GPU-optimized style for animated elements - promotes to compositor layer
+
     const gpuOptimizedStyle: React.CSSProperties = {
         transform: 'translateZ(0)',
         backfaceVisibility: 'hidden',

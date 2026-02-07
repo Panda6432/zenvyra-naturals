@@ -16,7 +16,7 @@ export default function HomeSection6() {
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
 
-            // Animate Vertical Line
+
             gsap.from(lineRef.current, {
                 height: 0,
                 duration: 1.5,
@@ -27,7 +27,7 @@ export default function HomeSection6() {
                 }
             });
 
-            // Animate Texts
+
             gsap.from([textLeftRef.current, textRightRef.current], {
                 opacity: 0,
                 y: 20,

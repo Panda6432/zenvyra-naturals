@@ -22,7 +22,7 @@ export default function HomeSection3() {
     let mm = gsap.matchMedia();
     const ctx = gsap.context(() => {
 
-      // 1. MOBILE ANIMATION (< 768px)
+
       mm.add("(max-width: 767px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -36,7 +36,7 @@ export default function HomeSection3() {
         tl.to(curtainRef.current, { width: "50%", ease: "power2.out" });
       });
 
-      // 2. TABLET ANIMATION (768px - 1023px)
+
       mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -50,7 +50,7 @@ export default function HomeSection3() {
         tl.to(curtainRef.current, { width: "50%", ease: "power2.out" });
       });
 
-      // 3. DESKTOP ANIMATION (>= 1024px)
+
       mm.add("(min-width: 1024px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -111,8 +111,6 @@ export default function HomeSection3() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                // FIX MOBILE VIEW: Removed aspect-[2/1]. Now uses auto height on mobile, square on desktop.
-                // Increased mobile padding to p-4.
                 className="bg-[#EAFF04] rounded-xl p-4 md:p-6 relative flex flex-col justify-between items-start md:aspect-square shadow-lg overflow-hidden"
               >
 

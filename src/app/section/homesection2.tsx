@@ -15,9 +15,7 @@ export default function HomeSection2() {
     let mm = gsap.matchMedia();
     const ctx = gsap.context(() => {
 
-      // --------------------------------------------------------
-      // 1. MOBILE ANIMATION (< 768px)
-      // --------------------------------------------------------
+
       mm.add("(max-width: 767px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -28,13 +26,9 @@ export default function HomeSection2() {
             toggleActions: "play none none reverse",
           },
         });
-        // Shrink to 15% width (Image gets 85%) - more room for text
         tl.to(leftBlockRef.current, { width: "15%", ease: "power2.out" });
       });
 
-      // --------------------------------------------------------
-      // 2. TABLET ANIMATION (768px - 1023px)
-      // --------------------------------------------------------
       mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -45,13 +39,9 @@ export default function HomeSection2() {
             toggleActions: "play none none reverse",
           },
         });
-        // Shrink to 50% width (More room for text on tablets)
         tl.to(leftBlockRef.current, { width: "50%", ease: "power2.out" });
       });
 
-      // --------------------------------------------------------
-      // 3. DESKTOP ANIMATION (>= 1024px)
-      // --------------------------------------------------------
       mm.add("(min-width: 1024px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -62,7 +52,6 @@ export default function HomeSection2() {
             toggleActions: "play none none reverse",
           },
         });
-        // Shrink to 40% width (Standard desktop ratio)
         tl.to(leftBlockRef.current, { width: "40%", ease: "power2.out" });
       });
 

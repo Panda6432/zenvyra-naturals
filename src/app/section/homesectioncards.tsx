@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 
-// Product cards with skin concern matching
+
 const productCards = [
     {
         id: "green",
@@ -51,7 +51,7 @@ export default function HomeSectionCards() {
     const [scrollProgress, setScrollProgress] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // Track scroll progress
+
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
