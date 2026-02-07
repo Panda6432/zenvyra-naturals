@@ -106,6 +106,12 @@ export default function HomeSection9() {
         return () => ctx.revert();
     }, []);
 
+    // GPU-optimized style for animated elements - promotes to compositor layer
+    const gpuOptimizedStyle: React.CSSProperties = {
+        transform: 'translateZ(0)',
+        backfaceVisibility: 'hidden',
+    };
+
     return (
         <div className="bg-black w-full overflow-x-hidden">
             {/* Gallery Section */}
@@ -120,72 +126,85 @@ export default function HomeSection9() {
                 <div className="hidden md:flex flex-col items-center justify-center gap-[2vw] origin-center">
                     {/* Row 1 */}
                     <div className="flex gap-[4vw] items-end translate-y-[3vw]">
-                        <div className="row-1 relative w-[16vw] h-[12vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-1 relative w-[16vw] h-[12vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row1[0]}
                                 alt="Zenvyra Naturals skincare customer - radiant skin result"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="16vw"
                             />
                         </div>
-                        <div className="row-1 relative w-[18vw] h-[14vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-1 relative w-[18vw] h-[14vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row1[1]}
                                 alt="Zenvyra Naturals skincare customer - glowing complexion"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="18vw"
                             />
                         </div>
                     </div>
 
                     {/* Row 2 (Center Row) */}
                     <div className="flex gap-[3vw] items-center z-10">
-                        <div className="row-2-side relative w-[14vw] h-[18vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-2-side relative w-[14vw] h-[18vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row2Sides[0]}
                                 alt="Zenvyra Naturals skincare customer - natural beauty"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="14vw"
                             />
                         </div>
 
                         {/* CENTER IMAGE */}
-                        <div className="center-image relative w-[25vw] h-[17vw] rounded-lg overflow-hidden shadow-2xl shrink-0 z-20" style={{ willChange: 'transform' }}>
+                        <div className="center-image relative w-[25vw] h-[17vw] rounded-lg overflow-hidden shrink-0 z-20" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.center}
                                 alt="Zenvyra Naturals skincare - botanical face cream results"
                                 fill
                                 className="object-cover"
                                 priority
+                                sizes="25vw"
                             />
                         </div>
 
-                        <div className="row-2-side relative w-[14vw] h-[18vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-2-side relative w-[14vw] h-[18vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row2Sides[1]}
                                 alt="Zenvyra Naturals skincare customer - healthy skin"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="14vw"
                             />
                         </div>
                     </div>
 
                     {/* Row 3 */}
                     <div className="flex gap-[4vw] items-start -translate-y-[3vw]">
-                        <div className="row-3 relative w-[18vw] h-[13vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-3 relative w-[18vw] h-[13vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row3[0]}
                                 alt="Zenvyra Naturals skincare customer - youthful glow"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="18vw"
                             />
                         </div>
-                        <div className="row-3 relative w-[15vw] h-[12vw] rounded-lg overflow-hidden shrink-0 shadow-2xl opacity-80" style={{ willChange: 'transform' }}>
+                        <div className="row-3 relative w-[15vw] h-[12vw] rounded-lg overflow-hidden shrink-0 opacity-80" style={gpuOptimizedStyle}>
                             <Image
                                 src={images.row3[1]}
                                 alt="Zenvyra Naturals skincare customer - clear skin"
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                sizes="15vw"
                             />
                         </div>
                     </div>
@@ -232,7 +251,7 @@ export default function HomeSection9() {
 
                     {/* Right Side - Form */}
                     <div className="w-full md:w-[50%] md:pr-12 flex justify-start md:justify-end">
-                        <div className="w-full max-w-xl flex flex-col gap-4 md:gap-6 p-6 md:p-8 bg-white/5 rounded-2xl border border-green-500/30 backdrop-blur-sm">
+                        <div className="w-full max-w-xl flex flex-col gap-4 md:gap-6 p-6 md:p-8 bg-white/5 rounded-2xl border border-green-500/30">
                             <div className="group relative">
                                 <label className="block text-xs font-semibold text-white mb-2 ml-1 uppercase tracking-wider">Name</label>
                                 <input
