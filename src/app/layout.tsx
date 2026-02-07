@@ -10,6 +10,7 @@ const italiana = Italiana({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zenvyranaturals.shop"),
   title: "Zenvyra Naturals | Premium Organic Face Cream & Botanical Skincare",
   description: "At Zenvyra Naturals, we believe beauty should be clean, conscious, and effective. Our face creams blend traditional botanical wisdom with modern skin science - free from harsh chemicals, rich in plant-powered actives.",
   keywords: [
@@ -79,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -86,9 +88,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zenvyra Naturals",
-              "description": "Premium organic face cream brand. Clean, conscious, and effective botanical skincare.",
+              "alternateName": ["Zenvyra", "Zenvyra Naturals Skincare", "Zenvyra Naturals India"],
+              "description": "Zenvyra Naturals is a premium organic skincare brand offering face creams and botanical beauty products. Clean, conscious, and effective plant-based skincare.",
               "url": "https://zenvyranaturals.shop",
               "logo": "https://zenvyranaturals.shop/zenvyra-naturals-face.webp",
+              "image": "https://zenvyranaturals.shop/zenvyra-naturals-face.webp",
               "sameAs": [
                 "https://instagram.com/zenvyranaturals",
                 "https://linkedin.com/company/zenvyranaturals"
@@ -96,8 +100,44 @@ export default function RootLayout({
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
-                "areaServed": "IN"
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi"]
+              },
+              "foundingDate": "2024",
+              "slogan": "Where petals become perfection"
+            })
+          }}
+        />
+        {/* WebSite Schema - Helps Google identify this as the official brand website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Zenvyra Naturals",
+              "alternateName": "Zenvyra Naturals Official Website",
+              "url": "https://zenvyranaturals.shop",
+              "description": "Official website of Zenvyra Naturals - Premium organic face cream and botanical skincare brand.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Zenvyra Naturals"
               }
+            })
+          }}
+        />
+        {/* Brand Schema - Reinforces brand identity */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Brand",
+              "name": "Zenvyra Naturals",
+              "description": "Zenvyra Naturals - Premium organic skincare brand specializing in botanical face creams and natural beauty products.",
+              "logo": "https://zenvyranaturals.shop/zenvyra-naturals-face.webp",
+              "slogan": "Where petals become perfection",
+              "url": "https://zenvyranaturals.shop"
             })
           }}
         />

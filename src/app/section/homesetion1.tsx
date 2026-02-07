@@ -55,6 +55,63 @@ export default function HomeSection1() {
 
   return (
     <section id="home" ref={comp} className="relative h-screen w-full overflow-hidden bg-[#0a1a10] text-[#f0f0f0]">
+      {/* SEO Content - Hidden from users but crawlable by search engines */}
+      <div className="sr-only">
+        <h2>Welcome to Zenvyra Naturals - Premium Organic Skincare Brand</h2>
+        <article>
+          <header>
+            <h3>About Zenvyra Naturals</h3>
+          </header>
+          <p>
+            Zenvyra Naturals is a premium organic skincare brand dedicated to creating clean,
+            conscious, and effective beauty products. Founded with the belief that nature holds
+            the key to radiant skin, Zenvyra Naturals combines traditional botanical wisdom
+            with modern skin science to deliver exceptional skincare solutions.
+          </p>
+          <p>
+            Our mission at Zenvyra Naturals is to provide high-quality, plant-based skincare
+            that nourishes your skin without harsh chemicals. Every Zenvyra Naturals product
+            is carefully formulated using the finest natural ingredients sourced from nature.
+          </p>
+          <h3>Zenvyra Naturals Products</h3>
+          <p>
+            Discover the Zenvyra Naturals collection featuring our signature face creams,
+            moisturizers, and botanical skincare treatments. Our bestselling Zenvyra Naturals
+            Face Cream combines powerful plant-based actives for youthful, glowing skin.
+          </p>
+          <ul>
+            <li>Zenvyra Naturals Organic Face Cream - Hydrating and anti-aging formula</li>
+            <li>Zenvyra Naturals Botanical Moisturizer - Deep nourishment for all skin types</li>
+            <li>Zenvyra Naturals Herbal Skincare - Traditional ingredients for modern beauty</li>
+            <li>Zenvyra Naturals Plant-Based Beauty - Clean beauty without compromise</li>
+          </ul>
+          <h3>Why Choose Zenvyra Naturals?</h3>
+          <p>
+            Zenvyra Naturals stands apart in the skincare industry with our commitment to
+            purity and efficacy. When you choose Zenvyra Naturals, you choose skincare that
+            is free from parabens, sulfates, and synthetic fragrances. Zenvyra Naturals
+            products are cruelty-free and environmentally conscious.
+          </p>
+          <p>
+            Experience the Zenvyra Naturals difference - where petals become perfection.
+            Our customers trust Zenvyra Naturals for their daily skincare routine because
+            we deliver visible results using only the purest botanical ingredients.
+          </p>
+          <h3>Zenvyra Naturals Brand Values</h3>
+          <p>
+            At Zenvyra Naturals, we believe in botanical beauty, herbal brilliance, and
+            youthful glow through plant-based formulations. Zenvyra Naturals represents
+            the future of clean beauty - effective skincare that respects both your skin
+            and the planet.
+          </p>
+          <p>
+            Shop Zenvyra Naturals today and discover why thousands of customers have made
+            us their trusted skincare brand. Zenvyra Naturals - Your journey to naturally
+            beautiful skin starts here.
+          </p>
+        </article>
+      </div>
+
       <Image
         id="hero-bg"
         src="/zenvyra-naturals-face.webp"
