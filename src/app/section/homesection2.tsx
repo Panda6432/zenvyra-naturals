@@ -63,7 +63,6 @@ export default function HomeSection2() {
   return (
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-[#0a1a10]">
 
-      {/* --- Background Layer (Image & Right/Bottom Text) --- */}
       <div className="absolute inset-0 h-full w-full z-0 flex justify-end">
         <div className="relative h-full w-full md:w-[60%]">
           <Image
@@ -75,9 +74,6 @@ export default function HomeSection2() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a10]/90 via-transparent to-transparent"></div>
 
-          {/* Centella Leaf Text */}
-          {/* Mobile: w-full + px-6 prevents cut-off. Right aligned. */}
-          {/* Tablet/Desktop: Pushed left (md:left-0) and made BIG (md:text-7xl). */}
           <div className="absolute bottom-0 right-0 w-full md:w-auto md:left-0 px-6 pb-8 md:p-10 md:pb-16 max-w-2xl z-20 text-right md:text-left break-words">
             <h3 className="text-3xl md:text-5xl lg:text-7xl text-[#EAFF04] font-normal mb-3 leading-none">
               Centella Leaf
@@ -89,7 +85,6 @@ export default function HomeSection2() {
         </div>
       </div>
 
-      {/* --- Foreground Layer (Left Text) --- */}
       <div
         ref={leftBlockRef}
         className="absolute left-0 top-0 h-full w-[90%] bg-[#0a1a10] z-10 flex flex-col justify-start pt-12 md:pt-24 pl-2 md:pl-10 pr-2"
@@ -97,7 +92,6 @@ export default function HomeSection2() {
       >
         <div className="max-w-xl h-full overflow-visible">
 
-          {/* MOBILE LAYOUT: Vertical Text Column */}
           <div className="flex flex-col md:hidden gap-2 h-[80%] justify-start">
             <span className="text-2xl sm:text-3xl text-[#f0f0f0] uppercase font-normal [writing-mode:vertical-lr] [text-orientation:upright] tracking-[0.1em] leading-none">
               PHYTO
@@ -107,8 +101,6 @@ export default function HomeSection2() {
             </span>
           </div>
 
-          {/* TABLET/DESKTOP LAYOUT */}
-          {/* md:text-5xl fits in the 50% box. lg:text-7xl scales up for desktop. */}
           <h2 className="hidden md:block text-[#f0f0f0] uppercase font-normal leading-none mb-6 tracking-wide md:text-5xl lg:text-7xl xl:text-8xl">
             PHYTO <br /> NUTRIENTS
           </h2>

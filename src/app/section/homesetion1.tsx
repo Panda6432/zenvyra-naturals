@@ -55,7 +55,7 @@ export default function HomeSection1() {
 
   return (
     <section id="home" ref={comp} className="relative h-screen w-full overflow-hidden bg-[#0a1a10] text-[#f0f0f0]">
-      {/* SEO Content - Hidden from users but crawlable by search engines */}
+
       <div className="sr-only">
         <h2>Welcome to Zenvyra Naturals - Premium Organic Skincare Brand</h2>
         <article>

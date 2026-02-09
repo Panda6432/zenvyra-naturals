@@ -72,7 +72,6 @@ export default function HomeSection3() {
   return (
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-[#0a1a10]">
 
-      {/* LAYER 1: Background Image (Left Side) */}
       <div className="absolute inset-0 h-full w-full z-0 flex justify-start">
         <div className="relative h-full w-[50%] md:w-[50%] lg:w-[40%]">
           <Image
@@ -95,18 +94,15 @@ export default function HomeSection3() {
         </div>
       </div>
 
-      {/* LAYER 2: The Green Curtain (Animation) */}
       <div
         ref={curtainRef}
         className="absolute right-0 top-0 h-full w-[90%] bg-[#0a1a10] z-10"
         style={{ willChange: "width" }}
       ></div>
 
-      {/* LAYER 3: The Fixed Content (Yellow Boxes) */}
       <div className="absolute right-0 top-0 h-full w-[50%] md:w-[50%] lg:w-[60%] z-20 flex flex-col justify-center items-center px-4 md:px-16 pointer-events-none">
         <div className="w-full h-full flex flex-col justify-center max-w-2xl mx-auto">
 
-          {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
             {stats.map((stat, index) => (
               <div
@@ -114,20 +110,16 @@ export default function HomeSection3() {
                 className="bg-[#EAFF04] rounded-xl p-4 md:p-6 relative flex flex-col justify-between items-start md:aspect-square shadow-lg overflow-hidden"
               >
 
-                {/* Number & % Group */}
-                {/* items-baseline ensures bottoms align */}
                 <div className="flex items-baseline -ml-2 -mt-4 md:-mt-6">
                   <span className="text-[7rem] sm:text-[8rem] md:text-[10rem] lg:text-[15rem] text-[#0a1a10] font-normal tracking-tighter leading-[0.7]">
                     {stat.value}
                   </span>
 
-                  {/* FIX PERCENTAGE SIZE: Made significantly bigger */}
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#0a1a10] font-light ml-2">
                     %
                   </span>
                 </div>
 
-                {/* Label */}
                 <span className="text-xl sm:text-2xl md:text-3xl text-[#0a1a10] font-normal tracking-wide leading-none z-10 mt-4 md:mt-0">
                   {stat.label}
                 </span>

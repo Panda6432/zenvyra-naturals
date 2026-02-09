@@ -225,28 +225,20 @@ export default function HomeSection9() {
                 </div>
             </section>
 
-            {/* 
-             Contact Section 
-             Mobile: auto height, stacked layout
-             Desktop: full screen height, side by side layout
-          */}
+          
             <section id="contact" className="contact-section relative w-full min-h-screen md:h-screen bg-black flex flex-col px-6 md:px-12 pt-12 md:pt-16 pb-24 md:pb-8 z-10">
 
-                {/* Main Content - Side by Side Layout on Desktop, Stacked on Mobile */}
                 <div className="flex-1 w-full flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
 
-                    {/* Left Side - Header & Tagline */}
                     <div className="w-full md:w-[40%] flex flex-col">
                         <h2 className="text-4xl sm:text-5xl md:text-8xl font-normal leading-none tracking-wide text-[#f0f0f0] text-left">
                             Contact Us
                         </h2>
-                        {/* Cursive Green Tagline */}
                         <p className="mt-4 md:mt-6 text-xl md:text-3xl text-green-400 italic font-light leading-relaxed" style={{ fontFamily: "'Italiana', serif" }}>
                             Where nature meets radiant skin
                         </p>
                     </div>
 
-                    {/* Right Side - Form */}
                     <div className="w-full md:w-[50%] md:pr-12 flex justify-start md:justify-end">
                         <div className="w-full max-w-xl flex flex-col gap-4 md:gap-6 p-6 md:p-8 bg-white/5 rounded-2xl border border-green-500/30">
                             <div className="group relative">
@@ -294,9 +286,7 @@ export default function HomeSection9() {
                     </div>
                 </div>
 
-                {/* Bottom Left - Customer Reviews */}
-                {/* On mobile: relative positioning within the flow */}
-                {/* On desktop: absolute bottom positioning */}
+       
                 <div className="relative md:absolute md:bottom-8 md:left-12 flex flex-col gap-2 mt-8 md:mt-0">
                     <div className="flex items-center gap-1">
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -315,7 +305,6 @@ export default function HomeSection9() {
 
             </section>
 
-            {/* Footer */}
             <Footer />
         </div>
     );

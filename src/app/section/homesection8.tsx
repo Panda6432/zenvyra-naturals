@@ -46,7 +46,6 @@ export default function HomeSection8() {
             ref={sectionRef}
             className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-[#0a1a10] via-[#050d08] to-black"
         >
-            {/* Title */}
             <div className="w-full px-6 md:px-10 flex flex-col md:flex-row justify-between items-start mb-16 md:mb-20">
                 <div className="w-full md:w-[35%] mb-10 md:mb-0">
                     <h2 className="text-6xl md:text-8xl font-normal leading-none tracking-wide text-white">
@@ -55,15 +54,11 @@ export default function HomeSection8() {
                 </div>
             </div>
 
-            {/* Marquee Container */}
             <div className="w-full relative overflow-hidden">
-                {/* Gradient Masks for fading edges */}
                 <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
 
-                {/* Scrolling Track */}
                 <div ref={marqueeRef} className="flex gap-8 w-max px-4 py-10">
-                    {/* Render Double for infinite loop */}
                     {[...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS].map((logo, index) => (
                         <div
                             key={index}

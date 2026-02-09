@@ -269,10 +269,8 @@ export default function HomeSection5() {
             </div>
             <div className="w-[calc(100%-32px)] h-[96vh] bg-[#034B38] rounded-3xl md:rounded-[1rem] lg:rounded-[1.2rem]  relative overflow-hidden flex flex-col items-center justify-between py-8">
 
-                {/* Visual Content Container */}
                 <div className="flex-1 w-full flex items-center justify-center gap-8 lg:gap-24 relative">
 
-                    {/* LEFT ORBIT */}
                     <div className="hidden lg:block relative h-[320px] w-[140px] flex-shrink-0 order-1 lg:order-1">
                         <svg className="absolute w-full h-full" viewBox="0 0 140 320" fill="none">
                             <defs>
@@ -292,11 +290,9 @@ export default function HomeSection5() {
                                 className="absolute w-10 h-10 md:w-12 md:h-12 flex items-center justify-center origin-center"
                                 style={{ opacity: 0 }}
                             >
-                                {/* Circle Visual */}
                                 <div className="absolute inset-0 rounded-full border border-white/60 overflow-hidden bg-black/20 shadow-lg" >
                                     <Image src={p.featureImages[0]} alt={p.features[0]} fill className="object-cover opacity-90" />
                                 </div>
-                                {/* Text Label (Left/Outer) */}
                                 <span className="absolute right-full mr-4 text-white text-base md:text-lg font-light whitespace-nowrap text-right">
                                     {p.features[0]}
                                 </span>
@@ -304,7 +300,6 @@ export default function HomeSection5() {
                         ))}
                     </div>
 
-                    {/* CENTER IMAGE */}
                     <div className="relative z-20 w-56 h-[22rem] md:w-72 md:h-[28rem] lg:w-80 lg:h-[32rem] flex-shrink-0 order-2 lg:order-2">
                         {products.map((product, i) => (
                             <div
@@ -318,7 +313,6 @@ export default function HomeSection5() {
                         ))}
                     </div>
 
-                    {/* RIGHT ORBIT */}
                     <div className="hidden lg:block relative h-[320px] w-[140px] flex-shrink-0 order-3 lg:order-3">
                         <svg className="absolute w-full h-full" viewBox="0 0 140 320" fill="none">
                             <defs>
@@ -338,11 +332,9 @@ export default function HomeSection5() {
                                 className="absolute w-10 h-10 md:w-12 md:h-12 flex items-center justify-center origin-center"
                                 style={{ opacity: 0 }}
                             >
-                                {/* Circle Visual */}
                                 <div className="absolute inset-0 rounded-full border border-white/60 overflow-hidden bg-black/20 shadow-lg" >
                                     <Image src={p.featureImages[1]} alt={p.features[1]} fill className="object-cover opacity-90" />
                                 </div>
-                                {/* Text Label (Right/Outer) */}
                                 <span className="absolute left-full ml-4 text-white text-base md:text-lg font-light whitespace-nowrap text-left">
                                     {p.features[1]}
                                 </span>
@@ -351,7 +343,6 @@ export default function HomeSection5() {
                     </div>
                 </div>
 
-                {/* Bottom Description */}
                 <div className="w-full px-4 shrink-0 z-30">
                     <div className="flex items-center gap-4 max-w-xl mx-auto">
                         <button onClick={() => handleManualNav('prev')} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg></button>

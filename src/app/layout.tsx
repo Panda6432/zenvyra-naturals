@@ -80,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Organization Schema */}
+    
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -108,7 +108,6 @@ export default function RootLayout({
             })
           }}
         />
-        {/* WebSite Schema - Helps Google identify this as the official brand website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -126,7 +125,6 @@ export default function RootLayout({
             })
           }}
         />
-        {/* Brand Schema - Reinforces brand identity */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

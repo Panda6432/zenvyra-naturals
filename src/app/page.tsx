@@ -30,7 +30,7 @@ export default function Home() {
       {/* Product Slideshow */}
       <HomeSection5 />
 
-      {/* Product Cards - Find Your Perfect Match */}
+      {/* Product Cards  */}
       <HomeSectionCards />
 
       {/* Minimalist Section */}

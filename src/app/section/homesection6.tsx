@@ -51,7 +51,6 @@ export default function HomeSection6() {
             className="relative w-full h-screen bg-[#0a1a10] text-[#f0f0f0] overflow-hidden"
             aria-label="Minimalist Section"
         >
-            {/* Vertical Line in Center */}
             <div className="absolute inset-0 flex justify-center items-center">
                 <div
                     ref={lineRef}
@@ -59,10 +58,8 @@ export default function HomeSection6() {
                 />
             </div>
 
-            {/* Container for Corners */}
             <div className="relative w-full h-full px-4 md:px-10 py-20 flex flex-col justify-between">
 
-                {/* Top Left Text */}
                 <div className="w-full flex justify-start">
                     <h2
                         ref={textLeftRef}
@@ -72,7 +69,6 @@ export default function HomeSection6() {
                     </h2>
                 </div>
 
-                {/* Bottom Right Text */}
                 <div className="w-full flex justify-end">
                     <h2
                         ref={textRightRef}
